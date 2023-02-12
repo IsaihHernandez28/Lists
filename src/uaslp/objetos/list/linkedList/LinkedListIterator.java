@@ -1,4 +1,4 @@
-package uaslp.objetos.list.linkedlist;
+package uaslp.objetos.list.linkedList;
 
 public class LinkedListIterator {
     private Node currentNode;
@@ -10,9 +10,7 @@ public class LinkedListIterator {
     }
     public String next(){
         String data = currentNode.data;
-
         currentNode = currentNode.next;
-
         return data;
     }
 }

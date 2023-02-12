@@ -1,4 +1,4 @@
-package uaslp.objetos.list.linkedlist;
+package uaslp.objetos.list.linkedList;
 
 class Node {
     String data;
