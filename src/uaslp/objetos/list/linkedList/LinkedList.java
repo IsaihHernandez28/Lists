@@ -4,16 +4,15 @@ public class LinkedList {
     private Node head;
     private Node tail;
     private int size;
-
     public void addAtTail(String data){
         Node node = new Node();
 
         node.data = data;
-        node.previous = tail;
 
         if(head == null){
             head = node;
         }else{
+            node.previous = tail;
             tail.next = node;
         }
         tail = node;

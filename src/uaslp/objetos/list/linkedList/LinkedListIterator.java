@@ -10,9 +10,7 @@ public class LinkedListIterator {
     }
     public String next(){
         String data = currentNode.data;
-
         currentNode = currentNode.next;
-
         return data;
     }
 }

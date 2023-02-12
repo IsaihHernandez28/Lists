@@ -1,7 +1,7 @@
 package Principal;
 
-import uaslp.objetos.list.linkedlist.LinkedList;
-import uaslp.objetos.list.linkedlist.LinkedListIterator;
+import uaslp.objetos.list.linkedList.LinkedList;
+import uaslp.objetos.list.linkedList.LinkedListIterator;
 
 public class Main {
     public static void main(String[] args) {
