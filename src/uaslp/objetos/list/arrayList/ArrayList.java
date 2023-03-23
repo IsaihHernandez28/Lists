@@ -1,8 +1,9 @@
 package uaslp.objetos.list.arrayList;
 
-import uaslp.objetos.list.linkedList.LinkedListIterator;
+import uaslp.objetos.list.Iterator;
+import uaslp.objetos.list.List;
 
-public class ArrayList {
+public class ArrayList implements List {
     private static final int INITIAL_SIZE = 2;
     private String []array;
     private int size;
@@ -31,6 +32,7 @@ public class ArrayList {
         if (index < 0 || index >= size) {
             return;
         }
+        //RECORRER DATOS: RECORDATORIO
         array[index] = null;
         size--;
     }
@@ -47,7 +49,7 @@ public class ArrayList {
         array[index] = data;
     }
     public String getAt(int index) {
-        if (index < 0 || index >= size) {
+        if (index < 0 || index >= size){
             return null;
         }else{
             return array[index];
@@ -59,19 +61,20 @@ public class ArrayList {
                 array[index] = null;
             }
         }
+        //RECORDATORIO SIZE Y MOVER DATOS
     }
     public int getSize() {
         return size;
     }
     private void increaseSize(){
-        String []newArray = new String[array.length + 2];
+        String []newArray = new String[array.length * 2];
 
         for(int i = 0; i< array.length; i++){
             newArray[i] = array[i];
         }
         array = newArray;
     }
-    public ArrayListIterator getIterator(){
+    public Iterator getIterator(){
         return new ArrayListIterator(this);
     }
 }
